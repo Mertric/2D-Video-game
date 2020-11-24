@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="2D Platformer"
-run/main_scene="res://src/Actors/Pink_Monster.tscn"
+run/main_scene="res://src/Levels/levelTest.tscn"
 config/icon="res://icon.png"
 
 [input]
