@@ -179,7 +179,7 @@ script = ExtResource( 1 )
 position = Vector2( 0, -16 )
 frames = SubResource( 31 )
 animation = "Jump"
-frame = 4
+frame = 20
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
