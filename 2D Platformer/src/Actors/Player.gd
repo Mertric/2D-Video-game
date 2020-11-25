@@ -1,8 +1,15 @@
 extends Actor
 
 var direction: = Vector2.ZERO
+export var stompImpulse: = 1000.0
 #built in Godot Function
 #delta is a timer
+func _on_EnemyDetector_area_entered(area: Area2D) -> void:
+	velocity = CalculateStompVelocity(velocity, stompImpulse
+		
+	)
+	
+
 func _physics_process(delta: float) -> void:
 	var isJumpInterrupted: = Input.is_action_just_released("jump") and velocity.y < 0.0
 	#calculate the direction the character is trying to move at every frame
@@ -19,11 +26,23 @@ func GetDirection() -> Vector2:
 
 #This will calculate the player movement velocity
 func CalculateMoveVelocity(linearVelocity: Vector2,speed: Vector2, direction: Vector2, jumpInterrtuped: bool) -> Vector2:
-	var newVelocity: = linearVelocity
-	newVelocity.x = speed.x * direction.x
-	newVelocity.y += gravity * get_physics_process_delta_time()
+	var outputVelocity: = linearVelocity
+	outputVelocity.x = speed.x * direction.x
+	outputVelocity.y += gravity * get_physics_process_delta_time()
 	if direction.y == -1.0:
-		newVelocity.y = speed.y * direction.y
+		outputVelocity.y = speed.y * direction.y
 	if jumpInterrtuped:
-		newVelocity.y = 0.0
-	return  newVelocity
+		outputVelocity.y = 0.0
+	return  outputVelocity
+	
+	
+#This function will replace the y component of the linear velocity vector with the impulse
+func CalculateStompVelocity(linearVelocity: Vector2, impulse: float) -> Vector2:
+	var output: = linearVelocity
+	output.y = -impulse
+	return output
+	
+
+
+
+
