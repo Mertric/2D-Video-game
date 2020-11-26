@@ -35,6 +35,10 @@ extents = Vector2( 838.499, 10 )
 
 [node name="levelTest" type="Node2D"]
 
+[node name="PassThroughPlatform" type="TileMap" parent="."]
+position = Vector2( 0, 1 )
+format = 1
+
 [node name="SolidPlatform" type="TileMap" parent="."]
 position = Vector2( 0, 1 )
 tile_set = SubResource( 2 )
