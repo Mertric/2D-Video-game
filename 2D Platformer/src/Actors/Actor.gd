@@ -14,3 +14,8 @@ var velocity: = Vector2.ZERO
 #	velocity.y	+= gravity * delta
 #	#velocity.y = max(velocity.y, speed.y)
 #	velocity = move_and_slide(velocity)
+
+#Nk:so, this stuff like the inherit class in java, right?
+#define Hit point for all actor
+export var hitPoint: = 0
+
