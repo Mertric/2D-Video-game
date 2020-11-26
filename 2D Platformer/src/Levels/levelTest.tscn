@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/LevelAssets/2DPP_Blocks_Block-2x2-03.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Pink_Monster.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Monster.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Levels/PassThroughPlatform.tres" type="TileSet" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -37,6 +38,8 @@ extents = Vector2( 838.499, 10 )
 
 [node name="PassThroughPlatform" type="TileMap" parent="."]
 position = Vector2( 0, 1 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
 format = 1
 
 [node name="SolidPlatform" type="TileMap" parent="."]
