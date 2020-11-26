@@ -13,12 +13,13 @@ func _ready():
 func _on_JumpDetector_body_entered(body: PhysicsBody2D) -> void:
 	if body.global_position.y > get_node("JumpDetector").global_position.y:
 		return
-	get_node("CollisionShape2D").disabled = true
+	$CollisionShape2D.set_deferred("disabled", true) 
 	queue_free()
 
-#This function wil allow the monster to move along the x axis 
+#This function wil allow the monster to move along the axis 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
+	#flip make the monster go the other direction on contact of the wall 
 	if  is_on_wall():
 		velocity.x *= -1.0
 	velocity.y = move_and_slide(velocity, FLOOR_NORMAL).y
