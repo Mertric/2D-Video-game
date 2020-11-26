@@ -44,6 +44,7 @@ position = Vector2( 0, 1 )
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 16, 16 )
 format = 1
+<<<<<<< Updated upstream
 tile_data = PoolIntArray( 2031631, 0, 0, 2031632, 1, 0, 2031633, 1, 0, 2031634, 1, 0, 2031635, 1, 0, 2031636, 1, 0, 2031637, 2, 0, 2097167, 3, 0, 2097168, 4, 0, 2097169, 4, 0, 2097170, 4, 0, 2097171, 4, 0, 2097172, 4, 0, 2097173, 5, 0, 2162703, 3, 0, 2162704, 4, 0, 2162705, 4, 0, 2162706, 4, 0, 2162707, 4, 0, 2162708, 4, 0, 2162709, 5, 0, 2228239, 3, 0, 2228240, 4, 0, 2228241, 4, 0, 2228242, 4, 0, 2228243, 4, 0, 2228244, 4, 0, 2228245, 5, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="PassThroughPlatform"]
@@ -52,6 +53,8 @@ tile_data = PoolIntArray( 2031631, 0, 0, 2031632, 1, 0, 2031633, 1, 0, 2031634, 
 position = Vector2( 296, 503 )
 shape = SubResource( 4 )
 one_way_collision = true
+=======
+>>>>>>> Stashed changes
 
 [node name="SolidPlatform" type="TileMap" parent="."]
 position = Vector2( 0, 1 )
