@@ -20,8 +20,8 @@ func _physics_process(delta: float) -> void:
 	var isJumpInterrupted: = Input.is_action_just_released("jump") and velocity.y < 0.0
 	#calculate the direction the character is trying to move at every frame
 	#returns a floating point value return 1 if pressed 0 if not
-	AnimSprite() 
-	var direction: = GetDirection() 
+	AnimatePlayer()
+	var direction: = GetDirection()
 	velocity = CalculateMoveVelocity(velocity,speed,direction,isJumpInterrupted)
 	velocity = move_and_slide(velocity, FLOOR_NORMAL)
 	
@@ -50,6 +50,21 @@ func CalculateStompVelocity(linearVelocity: Vector2, impulse: float) -> Vector2:
 	var output: = linearVelocity
 	output.y = -impulse
 	return output
+	
+func AnimatePlayer() -> void:
+	if facing_right == true:
+		$AnimatedSprite.scale.x = 1
+	else:
+		$AnimatedSprite.scale.x = -1
+	if Input.is_action_pressed("right"):
+		facing_right = true
+		$AnimatedSprite.play("Run")
+	elif Input.is_action_pressed("left"):
+		facing_right = false
+		$AnimatedSprite.play("Run")
+	else:
+		$AnimatedSprite.play("Idle")
+	
 
 #Animation of the sprite.
 #when the  user presses the input buttons the sprite will move accordingly  
@@ -74,6 +89,10 @@ func AnimSprite() -> void:
 	
 
 
+#func hitPointCheking(omni: int)-> void :
+#	var player_v = get_node("/root/Player")
+#	if player_v.hitPoint <= 0:
+		#on screen: dead
 
 
 
