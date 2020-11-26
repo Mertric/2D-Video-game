@@ -24,6 +24,15 @@ config/name="2D Platformer"
 run/main_scene="res://src/Levels/levelTest.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/fullscreen=true
+window/size/always_on_top=true
+window/size/test_width=1280
+window/size/test_height=720
+
 [input]
 
 left={

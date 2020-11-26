@@ -1,6 +1,6 @@
 extends Actor
 
-var direction: = Vector2.ZERO
+#: = Vector2.ZERO
 export var stompImpulse: = 1000.0
 
 var facing_right = true
@@ -39,7 +39,8 @@ func CalculateMoveVelocity(linearVelocity: Vector2,speed: Vector2, direction: Ve
 	return  outputVelocity
 	
 	
-#This function will replace the y component of the linear velocity vector with the impulse
+#This function will replace the y component of the linear velocity vector with the impulse, this will launch the player
+#upwards 
 func CalculateStompVelocity(linearVelocity: Vector2, impulse: float) -> Vector2:
 	var output: = linearVelocity
 	output.y = -impulse
