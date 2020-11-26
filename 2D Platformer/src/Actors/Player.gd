@@ -1,22 +1,30 @@
 extends Actor
 
-var direction: = Vector2.ZERO
+#var direction: = Vector2.ZERO
 export var stompImpulse: = 1000.0
+
+var facing_right = true
 #built in Godot Function
 #delta is a timer
+
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
-	velocity = CalculateStompVelocity(velocity, stompImpulse
-		
-	)
-	
+	$AnimatedSprite.play("Jump")
+	velocity = CalculateStompVelocity(velocity, stompImpulse)
+
+#if the enemy kinematic body enters this area the player will die
+func _on_EnemyDetector_body_entered(body:PhysicsBody2D) -> void:
+	queue_free()
+
 
 func _physics_process(delta: float) -> void:
 	var isJumpInterrupted: = Input.is_action_just_released("jump") and velocity.y < 0.0
 	#calculate the direction the character is trying to move at every frame
 	#returns a floating point value return 1 if pressed 0 if not
+	AnimSprite() 
 	var direction: = GetDirection() 
 	velocity = CalculateMoveVelocity(velocity,speed,direction,isJumpInterrupted)
 	velocity = move_and_slide(velocity, FLOOR_NORMAL)
+	
 
 #This function will get the direction of the player when key is pressed for either A=Left, D=Right, or SpaceBar=Jump
 #Jumping will only occur if the play is on the floor.
@@ -36,12 +44,45 @@ func CalculateMoveVelocity(linearVelocity: Vector2,speed: Vector2, direction: Ve
 	return  outputVelocity
 	
 	
-#This function will replace the y component of the linear velocity vector with the impulse
+#This function will replace the y component of the linear velocity vector with the impulse, this will launch the player
+#upwards 
 func CalculateStompVelocity(linearVelocity: Vector2, impulse: float) -> Vector2:
 	var output: = linearVelocity
 	output.y = -impulse
 	return output
+
+#Animation of the sprite.
+#when the  user presses the input buttons the sprite will move accordingly  
+func AnimSprite() -> void:
+	if facing_right == true:
+		$AnimatedSprite.scale.x = 1
+	else:
+		$AnimatedSprite.scale.x = -1
+		
+	if Input.is_action_pressed("right"):
+		facing_right = true
+		$AnimatedSprite.play("Run")
+	elif Input.is_action_pressed("left"):
+		facing_right = false
+		$AnimatedSprite.play("Run")
+	else:
+		$AnimatedSprite.play("Idle")
+		
+	if is_on_floor():
+		if Input.is_action_just_pressed("jump"):
+			$AnimatedSprite.play("Jump")
 	
+
+
+
+
+
+
+
+
+
+
+
 
 
 
