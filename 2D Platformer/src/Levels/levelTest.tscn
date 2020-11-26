@@ -46,3 +46,4 @@ gravity = 4000.0
 
 [node name="Monster" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1048, 544 )
+speed = Vector2( 300, 400 )

@@ -9,6 +9,8 @@ var facing_right = true
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	velocity = CalculateStompVelocity(velocity, stompImpulse)
 	
+func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
+	queue_free()
 
 func _physics_process(delta: float) -> void:
 	var isJumpInterrupted: = Input.is_action_just_released("jump") and velocity.y < 0.0
@@ -18,8 +20,6 @@ func _physics_process(delta: float) -> void:
 	velocity = CalculateMoveVelocity(velocity,speed,direction,isJumpInterrupted)
 	velocity = move_and_slide(velocity, FLOOR_NORMAL)
 	
-		
-		
 
 #This function will get the direction of the player when key is pressed for either A=Left, D=Right, or SpaceBar=Jump
 #Jumping will only occur if the play is on the floor.
@@ -45,6 +45,9 @@ func CalculateStompVelocity(linearVelocity: Vector2, impulse: float) -> Vector2:
 	output.y = -impulse
 	return output
 	
+
+
+
 
 
 
