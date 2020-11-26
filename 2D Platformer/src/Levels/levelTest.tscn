@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/LevelAssets/2DPP_Blocks_Block-2x2-03.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Pink_Monster.tscn" type="PackedScene" id=2]
@@ -30,20 +30,33 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 } ]
 0/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 838.499, 10 )
+
 [node name="levelTest" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 1 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 80, 80 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 20, 0, 0, 65536, 0, 0, 65556, 0, 0, 131072, 0, 0, 131092, 0, 0, 196608, 0, 0, 196628, 0, 0, 262144, 0, 0, 262164, 0, 0, 327680, 0, 0, 327699, 0, 0, 327700, 0, 0, 393216, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393236, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0 )
+tile_data = PoolIntArray( 0, 1610612736, 0, 20, 0, 0, 65536, 0, 0, 65556, 0, 0, 131072, 0, 0, 131091, 1610612736, 0, 131092, 0, 0, 196608, 0, 0, 196621, 1610612736, 0, 196622, 1610612736, 0, 196624, 1610612736, 0, 196625, 1610612736, 0, 196628, 0, 0, 262144, 0, 0, 262149, -1073741824, 0, 262151, -1073741824, 0, 262152, -1073741824, 0, 262153, -1073741824, 0, 262155, 1610612736, 0, 262164, 0, 0, 327680, 0, 0, 327698, 1610612736, 0, 327699, 0, 0, 327700, 0, 0, 393216, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393236, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 136, 472 )
+position = Vector2( 155.821, 541.847 )
 gravity = 4000.0
+hitPoint = 30
 
 [node name="Monster" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1048, 544 )
+position = Vector2( 1021.63, 541.168 )
 speed = Vector2( 300, 400 )
+hitPoint = 30
+
+[node name="air wall" type="StaticBody2D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="air wall"]
+position = Vector2( 839.802, 11.2552 )
+shape = SubResource( 3 )
