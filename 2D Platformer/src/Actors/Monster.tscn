@@ -181,8 +181,8 @@ script = ExtResource( 1 )
 [node name="slime" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -16 )
 frames = SubResource( 31 )
-animation = "Idle"
-frame = 4
+animation = "Jump"
+frame = 14
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

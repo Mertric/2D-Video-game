@@ -2,12 +2,12 @@ extends Actor
 
 var direction: = Vector2.ZERO
 export var stompImpulse: = 1000.0
+
+var facing_right = true
 #built in Godot Function
 #delta is a timer
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
-	velocity = CalculateStompVelocity(velocity, stompImpulse
-		
-	)
+	velocity = CalculateStompVelocity(velocity, stompImpulse)
 	
 
 func _physics_process(delta: float) -> void:
@@ -17,6 +17,9 @@ func _physics_process(delta: float) -> void:
 	var direction: = GetDirection() 
 	velocity = CalculateMoveVelocity(velocity,speed,direction,isJumpInterrupted)
 	velocity = move_and_slide(velocity, FLOOR_NORMAL)
+	
+		
+		
 
 #This function will get the direction of the player when key is pressed for either A=Left, D=Right, or SpaceBar=Jump
 #Jumping will only occur if the play is on the floor.
