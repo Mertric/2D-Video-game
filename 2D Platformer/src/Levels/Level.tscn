@@ -188,7 +188,7 @@ anims/Fade_Out = SubResource( 5 )
 anims/bounce = SubResource( 6 )
 
 [node name="Area2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 615.315, 902.308 )
+position = Vector2( 1101.64, 874.59 )
 nextScene = ExtResource( 7 )
 
 [editable path="Objective"]
