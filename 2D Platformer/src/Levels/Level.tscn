@@ -3,12 +3,19 @@
 [ext_resource path="res://src/Actors/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Pink_Monster.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Levels/passThroughTiles.tres" type="TileSet" id=3]
-[ext_resource path="res://src/Levels/levelTest.tres" type="TileSet" id=4]
+[ext_resource path="res://src/Levels/SolidTiles.tres" type="TileSet" id=4]
 
 [node name="Level" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Solid Platform" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -655360, 15, 0, -589824, 15, 0, -524288, 15, 0, -458752, 15, 0, -458718, 14, 0, -393216, 15, 0, -393182, 14, 0, -327680, 15, 0, -327646, 14, 0, -262144, 15, 0, -262110, 14, 0, -196608, 15, 0, -196574, 14, 0, -131072, 15, 0, -131038, 14, 0, -65536, 15, 0, -65502, 14, 0, 0, 15, 0, 34, 14, 0, 65536, 15, 0, 65570, 14, 0, 131072, 15, 0, 131106, 14, 0, 196608, 15, 0, 196642, 14, 0, 262144, 15, 0, 262145, 1, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 2, 0, 262152, 2, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 262160, 2, 0, 262161, 2, 0, 262162, 2, 0, 262163, 2, 0, 262164, 2, 0, 262165, 2, 0, 262166, 2, 0, 262167, 2, 0, 262168, 2, 0, 262169, 2, 0, 262170, 2, 0, 262171, 2, 0, 262172, 2, 0, 262173, 2, 0, 262174, 2, 0, 262175, 2, 0, 262176, 2, 0, 262177, 3, 0, 262178, 14, 0 )
+
+[node name="One Way Platform" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
 format = 1
 
 [node name="Monster" parent="." instance=ExtResource( 1 )]
@@ -16,8 +23,3 @@ position = Vector2( 441.763, 48.1339 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 148.029, 19.7822 )
-
-[node name="TileMap2" type="TileMap" parent="."]
-tile_set = ExtResource( 4 )
-format = 1
-tile_data = PoolIntArray( -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -131053, 0, 0, -65536, 0, 0, -65517, 0, 0, -65516, 0, 0, 0, 0, 0, 19, 0, 0, 20, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0 )
