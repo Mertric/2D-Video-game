@@ -240,7 +240,7 @@ anims/Fade_Out = SubResource( 11 )
 anims/bounce = SubResource( 12 )
 
 [node name="Area2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 592, 904 )
+position = Vector2( 592, 912 )
 nextScene = ExtResource( 7 )
 
 [node name="FallCollision" parent="." instance=ExtResource( 8 )]
@@ -259,6 +259,7 @@ texture = ExtResource( 9 )
 centered = false
 
 [node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 0.9 )
 motion_mirroring = Vector2( 640, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds"]
@@ -268,6 +269,7 @@ texture = ExtResource( 10 )
 centered = false
 
 [node name="Hills" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 0.9 )
 motion_mirroring = Vector2( 640, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Hills"]
