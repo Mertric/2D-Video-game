@@ -253,27 +253,26 @@ scale = Vector2( 50, 5 )
 motion_mirroring = Vector2( 800, 880 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Blue Sky"]
-position = Vector2( -2.1684e-19, 0 )
+position = Vector2( -8, 8 )
 scale = Vector2( 10, 5 )
 texture = ExtResource( 9 )
 centered = false
 
 [node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.9, 0.9 )
+motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 640, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds"]
-position = Vector2( 16, 0 )
 scale = Vector2( 8, 5 )
 texture = ExtResource( 10 )
 centered = false
 
 [node name="Hills" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.9, 0.9 )
+motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 640, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Hills"]
-position = Vector2( 0, 56 )
+position = Vector2( -8, 96 )
 scale = Vector2( 8, 5 )
 texture = ExtResource( 11 )
 centered = false
@@ -282,9 +281,10 @@ centered = false
 motion_mirroring = Vector2( 640, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Grass"]
-position = Vector2( 288, 424 )
+position = Vector2( 16, -64 )
 scale = Vector2( 8, 6 )
 texture = ExtResource( 12 )
+centered = false
 
 [editable path="Objective"]
 
