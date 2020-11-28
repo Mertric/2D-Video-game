@@ -86,7 +86,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 length = 0.9
 loop = true
 tracks/0/type = "value"
@@ -114,7 +114,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=11]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -144,7 +144,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 length = 0.9
 loop = true
 tracks/0/type = "value"
@@ -173,10 +173,6 @@ tracks/1/keys = {
 }
 
 [node name="Level" type="Node2D"]
-
-[node name="Area2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 584, 904 )
-nextScene = ExtResource( 7 )
 
 [node name="Solid Platform" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -280,7 +276,7 @@ one_way_collision = true
 position = Vector2( 1008, 848 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 176, 824 )
+position = Vector2( 152, 848 )
 
 [node name="Objective" parent="." instance=ExtResource( 5 )]
 position = Vector2( 287.316, 732.797 )
@@ -289,22 +285,18 @@ position = Vector2( 287.316, 732.797 )
 position = Vector2( 377.825, 732.09 )
 
 [node name="AnimationPlayer" parent="Objective2" index="2"]
-anims/Fade_Out = SubResource( 11 )
-anims/bounce = SubResource( 12 )
+anims/Fade_Out = SubResource( 9 )
+anims/bounce = SubResource( 10 )
 
 [node name="Objective3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 487.427, 617.539 )
 
 [node name="AnimationPlayer" parent="Objective3" index="2"]
-anims/Fade_Out = SubResource( 13 )
-anims/bounce = SubResource( 14 )
+anims/Fade_Out = SubResource( 11 )
+anims/bounce = SubResource( 12 )
 
 [node name="Area2D" parent="." instance=ExtResource( 6 )]
-<<<<<<< HEAD
-position = Vector2( 1101.64, 874.59 )
-=======
 position = Vector2( 584, 904 )
->>>>>>> main
 nextScene = ExtResource( 7 )
 
 [editable path="Objective"]
