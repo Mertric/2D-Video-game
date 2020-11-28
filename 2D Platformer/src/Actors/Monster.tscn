@@ -171,7 +171,7 @@ animations = [ {
 extents = Vector2( 13, 4 )
 
 [sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 12, 3 )
+extents = Vector2( 12, 4 )
 
 [node name="Monster" type="KinematicBody2D"]
 position = Vector2( 0, 1 )
@@ -184,7 +184,6 @@ speed = Vector2( 100, 100 )
 position = Vector2( 0, -17 )
 frames = SubResource( 31 )
 animation = "Idle"
-frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -203,6 +202,6 @@ position = Vector2( 0, -9 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JumpDetector"]
-position = Vector2( 0, -3 )
+position = Vector2( 0, -4 )
 shape = SubResource( 33 )
 [connection signal="body_entered" from="JumpDetector" to="." method="_on_JumpDetector_body_entered"]

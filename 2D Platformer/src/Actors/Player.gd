@@ -4,6 +4,7 @@ extends Actor
 export var stompImpulse: = 1000.0
 
 var facing_right = true
+var isDead = false
 #built in Godot Function
 #delta is a timer
 
@@ -13,17 +14,24 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 
 #if the enemy kinematic body enters this area the player will die
 func _on_EnemyDetector_body_entered(body:PhysicsBody2D) -> void:
-	queue_free()
+	dead()
+	#queue_free()
+	
 
 
 func _physics_process(delta: float) -> void:
-	var isJumpInterrupted: = Input.is_action_just_released("jump") and velocity.y < 0.0
-	#calculate the direction the character is trying to move at every frame
-	#returns a floating point value return 1 if pressed 0 if not
-	AnimatePlayer()
-	var direction: = GetDirection()
-	velocity = CalculateMoveVelocity(velocity,speed,direction,isJumpInterrupted)
-	velocity = move_and_slide(velocity, FLOOR_NORMAL)
+	if isDead == false:
+		var isJumpInterrupted: = Input.is_action_just_released("jump") and velocity.y < 0.0
+		#calculate the direction the character is trying to move at every frame
+		#returns a floating point value return 1 if pressed 0 if not
+		AnimatePlayer()
+		var direction: = GetDirection()
+		velocity = CalculateMoveVelocity(velocity,speed,direction,isJumpInterrupted)
+		velocity = move_and_slide(velocity, FLOOR_NORMAL)
+		
+
+	
+	
 	
 
 #This function will get the direction of the player when key is pressed for either A=Left, D=Right, or SpaceBar=Jump
@@ -88,11 +96,23 @@ func AnimSprite() -> void:
 			$AnimatedSprite.play("Jump")
 	
 
+func dead() -> void:
+	isDead = true
+	velocity = Vector2(0,0)
+	$CollisionShape2D.call_deferred("set_disabled", true)
+	$Timer.start()
+	
+func _on_Timer_timeout():
+	#change this to title scree or to a checkpoint
+	get_tree().change_scene("res://src/Levels/Level.tscn")
 
 #func hitPointCheking(omni: int)-> void :
 #	var player_v = get_node("/root/Player")
 #	if player_v.hitPoint <= 0:
 		#on screen: dead
+
+
+
 
 
 
