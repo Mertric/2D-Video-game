@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/4.png-eabe884773fb9a5605d7eec88461fd28.stex"
+path="res://.import/hills.png-d1d70c5c9c4da36fe72ec713edde82c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LevelAssets/background/4.png"
-dest_files=[ "res://.import/4.png-eabe884773fb9a5605d7eec88461fd28.stex" ]
+source_file="res://Assets/LevelAssets/background/hills.png"
+dest_files=[ "res://.import/hills.png-d1d70c5c9c4da36fe72ec713edde82c9.stex" ]
 
 [params]
 
