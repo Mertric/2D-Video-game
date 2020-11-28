@@ -84,11 +84,16 @@ func AnimSprite() -> void:
 	else:
 		$AnimatedSprite.scale.x = -1
 	
-	if Input.is_action_pressed("jump"): # and is_on_floor():
+	if Input.is_action_pressed("jump"):
+		
+		if is_on_floor():
+			$AnimatedSprite.play("Idle")
+			
 		if Input.is_action_just_pressed("right"):
 			facing_right = true
 		elif Input.is_action_just_pressed("left"):
 			facing_right = false
+			
 		$AnimatedSprite.play("Jump")
 		
 	elif Input.is_action_pressed("right"):
@@ -100,7 +105,11 @@ func AnimSprite() -> void:
 		$AnimatedSprite.play("Run")
 
 	else:
-		$AnimatedSprite.play("Idle")	$AnimatedSprite.play("Jump")
+		$AnimatedSprite.play("Idle")
+		
+	#if is_on_floor():
+	#	if Input.is_action_just_pressed("jump"):
+	#		$AnimatedSprite.play("Jump")
 	
 
 func dead() -> void:
