@@ -1,8 +1,87 @@
-[gd_scene format=2]
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI_Stuff/Play.gd" type="Script" id=1]
+[ext_resource path="res://UI_Stuff/Quit.gd" type="Script" id=2]
+[ext_resource path="res://UI_Stuff/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI_Stuff/ChangeSceneButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI_Stuff/Quit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI_Stuff/UI_Theme.tres" type="Theme" id=6]
+[ext_resource path="res://UI_Stuff/MainScreenBackgrounds/CoOlBaCkGrOuNd.png" type="Texture" id=7]
 
 [node name="EndScreen" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CoOlBaCkGrOuNd" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -88.0
+margin_top = -314.0
+margin_right = 88.0
+margin_bottom = -280.0
+text = "Game Finished"
+
+[node name="Score and Death" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -68.0
+margin_top = -250.0
+margin_right = 69.0
+margin_bottom = -179.0
+text = "Final Score:
+Deaths:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -118.0
+margin_top = -130.0
+margin_right = 118.0
+margin_bottom = 130.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Menu" instance=ExtResource( 4 )]
+margin_right = 236.0
+margin_bottom = 40.0
+text = "Play Again"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+nextScenePath = "res://Screen/MainScreen.tscn"
+
+[node name="Quit" type="Button" parent="Menu" instance=ExtResource( 5 )]
+margin_top = 44.0
+margin_right = 236.0
+margin_bottom = 84.0
+text = "Quit"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="Menu/Play" to="Menu/Play" method="_on_Play_button_up"]
+[connection signal="button_up" from="Menu/Quit" to="Menu/Quit" method="_on_Quit_button_up"]
