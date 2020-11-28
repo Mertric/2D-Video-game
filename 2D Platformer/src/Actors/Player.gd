@@ -60,6 +60,7 @@ func CalculateStompVelocity(linearVelocity: Vector2, impulse: float) -> Vector2:
 	output.y = -impulse
 	return output
 	
+#Nk: unused
 func AnimatePlayer() -> void:
 	if facing_right == true:
 		$AnimatedSprite.scale.x = 1
@@ -84,20 +85,22 @@ func AnimSprite() -> void:
 		$AnimatedSprite.scale.x = -1
 	
 	if Input.is_action_pressed("jump"): # and is_on_floor():
+		if Input.is_action_just_pressed("right"):
+			facing_right = true
+		elif Input.is_action_just_pressed("left"):
+			facing_right = false
 		$AnimatedSprite.play("Jump")
+		
 	elif Input.is_action_pressed("right"):
 		facing_right = true
 		$AnimatedSprite.play("Run")
+		
 	elif Input.is_action_pressed("left"):
 		facing_right = false
 		$AnimatedSprite.play("Run")
 
 	else:
-		$AnimatedSprite.play("Idle")
-		
-	#if is_on_floor():
-	#	if Input.is_action_just_pressed("jump"):
-	#		$AnimatedSprite.play("Jump")
+		$AnimatedSprite.play("Idle")	$AnimatedSprite.play("Jump")
 	
 
 func dead() -> void:
