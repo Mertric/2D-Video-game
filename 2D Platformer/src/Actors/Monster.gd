@@ -22,6 +22,9 @@ func _physics_process(delta: float) -> void:
 	#flip make the monster go the other direction on contact of the wall 
 	if  is_on_wall():
 		velocity.x *= -1.0
+	if $RayCast2D.is_colliding() == false:
+		velocity.x *= -1.0
+		$RayCast2D.position.x *= -1.0
 	velocity.y = move_and_slide(velocity, FLOOR_NORMAL).y
 
 
