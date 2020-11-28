@@ -2,6 +2,8 @@ extends "res://src/Actors/Actor.gd"
 
 #the visabilityEnabler2D will disable the monster from moving when it is out of the frame of the player.
 var frameCount
+
+export var score: = 100
 #ready function
 #this is called by every node by every scene starting at the deepest node of the scene tree.
 func _ready():
@@ -14,7 +16,7 @@ func _on_JumpDetector_body_entered(body: PhysicsBody2D) -> void:
 	if body.global_position.y > get_node("JumpDetector").global_position.y:
 		return
 	$CollisionShape2D.set_deferred("disabled", true) 
-	queue_free()
+	die()
 
 #This function wil allow the monster to move along the axis 
 func _physics_process(delta: float) -> void:
@@ -27,5 +29,8 @@ func _physics_process(delta: float) -> void:
 		$RayCast2D.position.x *= -1.0
 	velocity.y = move_and_slide(velocity, FLOOR_NORMAL).y
 
+func die() -> void:
+	PlayerData.score += score
+	queue_free()
 
 
