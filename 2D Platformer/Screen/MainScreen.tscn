@@ -25,8 +25,12 @@ __meta__ = {
 }
 
 [node name="Title" parent="." instance=ExtResource( 2 )]
-margin_top = 90.2374
-margin_bottom = 124.237
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -120.5
+margin_top = -353.583
+margin_right = 120.5
+margin_bottom = -319.583
 text = "CoOl JuMpInG GaMe"
 
 [node name="Menu" type="VBoxContainer" parent="."]
