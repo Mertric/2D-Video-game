@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://src/Actors/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Pink_Monster.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://src/Levels/Level2TestForTele.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Objects/FallCollision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/LevelAssets/background/sky.png" type="Texture" id=9]
+[ext_resource path="res://Assets/LevelAssets/background/clouds.png" type="Texture" id=10]
+[ext_resource path="res://Assets/LevelAssets/background/hills.png" type="Texture" id=11]
+[ext_resource path="res://Assets/LevelAssets/background/grass.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 16 )
@@ -244,13 +247,39 @@ scale = Vector2( 50, 5 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Blue Sky" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 800, 1232 )
+motion_mirroring = Vector2( 800, 880 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Blue Sky"]
-position = Vector2( -1.52588e-05, 0 )
-scale = Vector2( 10, 7 )
+position = Vector2( -2.1684e-19, 0 )
+scale = Vector2( 10, 5 )
 texture = ExtResource( 9 )
 centered = false
+
+[node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds"]
+position = Vector2( 16, 0 )
+scale = Vector2( 8, 5 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Hills" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Hills"]
+position = Vector2( 0, 56 )
+scale = Vector2( 8, 5 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Grass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Grass"]
+position = Vector2( 288, 424 )
+scale = Vector2( 8, 6 )
+texture = ExtResource( 12 )
 
 [editable path="Objective"]
 
