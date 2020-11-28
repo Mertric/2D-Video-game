@@ -95,6 +95,9 @@ func AnimSprite() -> void:
 			facing_right = false
 			
 		$AnimatedSprite.play("Jump")
+	
+	elif Input.is_action_pressed("right") and Input.is_action_pressed("left"):
+		$AnimatedSprite.play("Idle")
 		
 	elif Input.is_action_pressed("right"):
 		facing_right = true
