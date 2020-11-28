@@ -118,6 +118,7 @@ func AnimSprite() -> void:
 func dead() -> void:
 	isDead = true
 	velocity = Vector2(0,0)
+	$AnimatedSprite.play("Death")
 	$CollisionShape2D.call_deferred("set_disabled", true)
 	$Timer.start()
 	
