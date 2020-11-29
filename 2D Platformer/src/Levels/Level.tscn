@@ -319,6 +319,9 @@ one_way_collision = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 9 )]
 
+[node name="Sprite" parent="ParallaxBackground/Hills" index="0"]
+position = Vector2( 0, 96 )
+
 [node name="Monster" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1008, 848 )
 
@@ -346,8 +349,10 @@ anims/Fade_Out = SubResource( 23 )
 anims/bounce = SubResource( 24 )
 
 [node name="FallCollision" parent="." instance=ExtResource( 8 )]
-position = Vector2( 910.599, 1056.9 )
-scale = Vector2( 50, 5 )
+position = Vector2( 3728, 1016 )
+scale = Vector2( 300, 5 )
+
+[editable path="ParallaxBackground"]
 
 [editable path="Objective"]
 
