@@ -116,4 +116,13 @@ position = Vector2( 936, 744 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
+[node name="Sprite" parent="ParallaxBackground/Blue Sky" index="0"]
+position = Vector2( -8, 56 )
+
+[node name="Sprite" parent="ParallaxBackground/Hills" index="0"]
+position = Vector2( 0, 32 )
+scale = Vector2( 8, 5.5 )
+
 [editable path="Objective"]
+
+[editable path="ParallaxBackground"]
