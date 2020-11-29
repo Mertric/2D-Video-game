@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/LevelAssets/background/clouds.png" type="Texture" id=1]
+[ext_resource path="res://Assets/LevelAssets/background/hills.png" type="Texture" id=2]
+[ext_resource path="res://Assets/LevelAssets/background/grass.png" type="Texture" id=3]
+[ext_resource path="res://Assets/LevelAssets/background/sky.png" type="Texture" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Blue Sky" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 800, 880 )
+
+[node name="Sprite" type="Sprite" parent="Blue Sky"]
+position = Vector2( -8, 8 )
+scale = Vector2( 10, 5 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="Clouds"]
+scale = Vector2( 8, 5 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Hills" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="Hills"]
+position = Vector2( -8, 96 )
+scale = Vector2( 8, 5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Grass" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 640, 0 )
+
+[node name="Sprite" type="Sprite" parent="Grass"]
+position = Vector2( 16, -64 )
+scale = Vector2( 8, 6 )
+texture = ExtResource( 3 )
+centered = false
