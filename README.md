@@ -86,7 +86,6 @@ Test 3: enemy kills player when they run into the player
 Test 4: when player falls off the main platform, they respawn at the beginning of the level
 Test 5: when player has all coins and makes it to the portal they respawn in the next level
 
-
 ## How to Access the Game
 Put instructions here. 
 
