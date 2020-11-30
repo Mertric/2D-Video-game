@@ -96,6 +96,7 @@ func AnimSprite() -> void:
 			
 		$AnimatedSprite.play("Jump")
 	
+	
 	elif Input.is_action_pressed("right") and Input.is_action_pressed("left"):
 		$AnimatedSprite.play("Idle")
 		
@@ -114,6 +115,9 @@ func AnimSprite() -> void:
 	#	if Input.is_action_just_pressed("jump"):
 	#		$AnimatedSprite.play("Jump")
 	
+	#if player jumps then play the JumpSound
+	if Input.is_action_just_pressed("jump"):
+		$JumpSound.play()
 
 func dead() -> void:
 	isDead = true
