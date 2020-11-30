@@ -8,17 +8,20 @@ var isDead = false
 #built in Godot Function
 #delta is a timer
 
+# warning-ignore:unused_argument
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	$AnimatedSprite.play("Jump")
 	velocity = CalculateStompVelocity(velocity, stompImpulse)
 
 #if the enemy kinematic body enters this area the player will die
+# warning-ignore:unused_argument
 func _on_EnemyDetector_body_entered(body:PhysicsBody2D) -> void:
 	dead()
 	#queue_free()
 	
 
 
+# warning-ignore:unused_argument
 func _physics_process(delta: float) -> void:
 	if isDead == false:
 		var isJumpInterrupted: = Input.is_action_just_released("jump") and velocity.y < 0.0
@@ -38,8 +41,10 @@ func _physics_process(delta: float) -> void:
 #This function will get the direction of the player when key is pressed for either A=Left, D=Right, or SpaceBar=Jump
 #Jumping will only occur if the play is on the floor.
 func GetDirection() -> Vector2:
-	return Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"),-1.0
-	if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0)	
+#	return Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"),-1.0
+#	if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0)	
+	return Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"),-Input.get_action_strength("jump")
+	if is_on_floor() and Input.is_action_just_pressed("jump") else 0.0)	
 
 #This will calculate the player movement velocity
 func CalculateMoveVelocity(linearVelocity: Vector2,speed: Vector2, direction: Vector2, jumpInterrtuped: bool) -> Vector2:
@@ -126,14 +131,15 @@ func dead() -> void:
 	velocity = Vector2(0,0)
 	$AnimatedSprite.play("Death")
 	$CollisionShape2D.call_deferred("set_disabled", true)
-
-	$Timer.start()
+	$Timer.start(100.0)
 	
 func _on_Timer_timeout():
 	#change this to title scree or to a checkpoint
 	if PlayerData.currentScene == null:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene("res://src/Levels/Level.tscn")
 	else:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene_to(PlayerData.currentScene)
 
 #func hitPointCheking(omni: int)-> void :
