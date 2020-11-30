@@ -11,7 +11,7 @@
 motion_mirroring = Vector2( 1040, 880 )
 
 [node name="Sprite" type="Sprite" parent="Blue Sky"]
-position = Vector2( -8, 8 )
+position = Vector2( 0, 8 )
 scale = Vector2( 13, 5 )
 texture = ExtResource( 4 )
 centered = false
@@ -30,7 +30,7 @@ motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite" type="Sprite" parent="Hills"]
-position = Vector2( -8, 96 )
+position = Vector2( 0, 56 )
 scale = Vector2( 12, 5 )
 texture = ExtResource( 2 )
 centered = false

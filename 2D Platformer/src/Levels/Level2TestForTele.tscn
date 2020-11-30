@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/Actors/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Pink_Monster.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://UI_Stuff/ParallaxBackground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/Teleport.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Screen/MainScreen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Objects/FallCollision.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 8 )
@@ -119,8 +120,12 @@ position = Vector2( 936, 744 )
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
 [node name="Area2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 552, 896 )
+position = Vector2( 7200, 512 )
 nextScene = ExtResource( 8 )
+
+[node name="FallCollision" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4296, 960 )
+scale = Vector2( 300, 5 )
 
 [editable path="Objective"]
 
