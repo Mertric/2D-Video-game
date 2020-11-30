@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://src/Actors/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Pink_Monster.tscn" type="PackedScene" id=2]
@@ -70,127 +70,7 @@ extents = Vector2( 56, 8 )
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 96, 8 )
 
-[sub_resource type="Animation" id=21]
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
-}
-
-[sub_resource type="Animation" id=22]
-length = 0.9
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.646013 ),
-"transitions": PoolRealArray( 0.307787, 2.07053 ),
-"update": 0,
-"values": [ Vector2( 0, 2 ), Vector2( -3.55271e-15, -13 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=23]
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
-}
-
-[sub_resource type="Animation" id=24]
-length = 0.9
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.646013 ),
-"transitions": PoolRealArray( 0.307787, 2.07053 ),
-"update": 0,
-"values": [ Vector2( 0, 2 ), Vector2( -3.55271e-15, -13 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
 [node name="Level" type="Node2D"]
-
-[node name="Area2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 624, 896 )
-nextScene = ExtResource( 7 )
 
 [node name="NonCollision tiles" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
@@ -326,76 +206,166 @@ scale = Vector2( 12, 5.5 )
 [node name="Sprite" parent="ParallaxBackground/Grass" index="0"]
 position = Vector2( 9.53674e-07, -208 )
 
-[node name="Monster" parent="." instance=ExtResource( 1 )]
-position = Vector2( 464, 848 )
+[node name="Enemies" type="Node2D" parent="."]
 
-[node name="Monster2" parent="." instance=ExtResource( 1 )]
+[node name="Monster" parent="Enemies" instance=ExtResource( 1 )]
+position = Vector2( 424, 848 )
+
+[node name="Monster2" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 900.244, 848 )
 
-[node name="Monster3" parent="." instance=ExtResource( 1 )]
+[node name="Monster3" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 616, 656 )
 
-[node name="Monster4" parent="." instance=ExtResource( 1 )]
+[node name="Monster4" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 1400, 848 )
 
-[node name="Monster11" parent="." instance=ExtResource( 1 )]
+[node name="Monster11" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 1152, 848 )
 
-[node name="Monster5" parent="." instance=ExtResource( 1 )]
+[node name="Monster5" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 1704, 800 )
 
-[node name="Monster6" parent="." instance=ExtResource( 1 )]
+[node name="Monster6" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 2632, 768 )
 
-[node name="Monster7" parent="." instance=ExtResource( 1 )]
+[node name="Monster7" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 3384, 864 )
 
-[node name="Monster8" parent="." instance=ExtResource( 1 )]
+[node name="Monster8" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 4360, 848 )
 
-[node name="Monster9" parent="." instance=ExtResource( 1 )]
+[node name="Monster9" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 4664, 848 )
 
-[node name="Monster10" parent="." instance=ExtResource( 1 )]
+[node name="Monster10" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 5032, 848 )
 
-[node name="Monster12" parent="." instance=ExtResource( 1 )]
+[node name="Monster12" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 5240, 544 )
 
-[node name="Monster13" parent="." instance=ExtResource( 1 )]
+[node name="Monster13" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 6352, 800 )
 
-[node name="Monster14" parent="." instance=ExtResource( 1 )]
+[node name="Monster14" parent="Enemies" instance=ExtResource( 1 )]
 position = Vector2( 6704, 848 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 176, 840 )
 
-[node name="Objective" parent="." instance=ExtResource( 5 )]
+[node name="Coin Objectives" type="Node2D" parent="."]
+
+[node name="Objective" parent="Coin Objectives" instance=ExtResource( 5 )]
 position = Vector2( 287.316, 732.797 )
 
-[node name="Objective2" parent="." instance=ExtResource( 5 )]
+[node name="Objective2" parent="Coin Objectives" instance=ExtResource( 5 )]
 position = Vector2( 377.825, 732.09 )
 
-[node name="AnimationPlayer" parent="Objective2" index="2"]
-anims/Fade_Out = SubResource( 21 )
-anims/bounce = SubResource( 22 )
-
-[node name="Objective3" parent="." instance=ExtResource( 5 )]
+[node name="Objective3" parent="Coin Objectives" instance=ExtResource( 5 )]
 position = Vector2( 487.427, 617.539 )
 
-[node name="AnimationPlayer" parent="Objective3" index="2"]
-anims/Fade_Out = SubResource( 23 )
-anims/bounce = SubResource( 24 )
+[node name="Objective4" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 320, 616 )
+
+[node name="Objective5" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 728, 824 )
+
+[node name="Objective6" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 928, 792 )
+
+[node name="Objective7" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 1184, 728 )
+
+[node name="Objective8" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 1312, 632 )
+
+[node name="Objective9" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 1376, 760 )
+
+[node name="Objective10" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 1088, 552 )
+
+[node name="Objective11" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 1360, 552 )
+
+[node name="Objective12" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 1832, 728 )
+
+[node name="Objective13" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 2304, 824 )
+
+[node name="Objective14" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 2312, 488 )
+
+[node name="Objective15" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 2576, 552 )
+
+[node name="Objective16" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 2584, 736 )
+
+[node name="Objective17" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 2864, 816 )
+
+[node name="Objective18" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 2960, 768 )
+
+[node name="Objective19" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 3064, 816 )
+
+[node name="Objective20" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 3304, 840 )
+
+[node name="Objective21" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 3392, 680 )
+
+[node name="Objective22" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 3624, 600 )
+
+[node name="Objective23" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 3800, 840 )
+
+[node name="Objective24" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 4040, 824 )
+
+[node name="Objective25" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 4480, 784 )
+
+[node name="Objective26" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 4776, 808 )
+
+[node name="Objective27" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 5344, 720 )
+
+[node name="Objective28" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 4944, 568 )
+
+[node name="Objective29" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 5384, 504 )
+
+[node name="Objective30" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 5248, 456 )
+
+[node name="Objective31" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 5128, 504 )
+
+[node name="Objective32" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 6152, 656 )
+
+[node name="Objective33" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 6784, 808 )
+
+[node name="Objective34" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 6936, 808 )
+
+[node name="Objective35" parent="Coin Objectives" instance=ExtResource( 5 )]
+position = Vector2( 7088, 808 )
 
 [node name="FallCollision" parent="." instance=ExtResource( 8 )]
 position = Vector2( 3728, 1016 )
 scale = Vector2( 300, 5 )
 
+[node name="Area2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 7424, 544 )
+nextScene = ExtResource( 7 )
+
 [editable path="ParallaxBackground"]
-
-[editable path="Objective"]
-
-[editable path="Objective2"]
-
-[editable path="Objective3"]
