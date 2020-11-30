@@ -28,7 +28,7 @@ The player’s objective is to collect all of the coins in the level in order to
 
 * Player's Character 
 * Enemy characters
-  - Green slime: jumps and glides
+  - Green slime
 
 
 ## Controls
@@ -39,11 +39,11 @@ The player’s objective is to collect all of the coins in the level in order to
 
 ## Rules of the Game
 
-* Player needs to collect all coins and reach the portal at the end of the level to move on to the next level
-* If enemies are able to hit a player, that player will lose a life
+* Player collects as many coins as they can and reaches the portal at the end of the level to move on to the next level
+* If enemies are able to hit a player, that player will return to the beginning to the current level
 * The player can defeat enemies by jumping on top of the enemies head
-* The player can pass through some walls and jump through some platforms. Some walls/platforms they cannot
-* If the player falls off the edge of a mainland platform, they will respawn at the beginning of a level and lose a life
+* The player can pass through some walls and jump through some platforms. For some walls/platforms they cannot do this.
+* If the player falls off the edge of a mainland platform, they will respawn at the beginning of a level 
 
 
 ## Process of Creating the Game
@@ -84,7 +84,7 @@ Test 1: player is unable to walk through certain walls/platforms. Some platforms
 Test 2: player jumps on enemies head to kill enemy </br>
 Test 3: enemy kills player when they run into the player </br>
 Test 4: when player falls off the main platform, they respawn at the beginning of the level  </br>
-Test 5: when player has all coins and makes it to the portal they respawn in the next level </br>
+Test 5: when player makes it to the portal they respawn in the next level </br>
 
 ## How to Access the Game
 Put instructions here. 
@@ -114,3 +114,6 @@ Menu screen boxes </br>
 Artist: Kenny </br>
 https://opengameart.org/content/ui-pack </br>
 
+Jump and coin collection sounds </br>
+Artist: Kenny </br>
+https://opengameart.org/content/interface-sounds </br>
