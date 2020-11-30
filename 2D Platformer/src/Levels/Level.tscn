@@ -73,7 +73,7 @@ extents = Vector2( 96, 8 )
 [node name="Level" type="Node2D"]
 
 [node name="Area2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 7424, 544 )
+position = Vector2( 552.231, 923.095 )
 nextScene = ExtResource( 7 )
 
 [node name="NonCollision tiles" type="TileMap" parent="."]

@@ -121,11 +121,15 @@ func dead() -> void:
 	velocity = Vector2(0,0)
 	$AnimatedSprite.play("Death")
 	$CollisionShape2D.call_deferred("set_disabled", true)
+
 	$Timer.start()
 	
 func _on_Timer_timeout():
 	#change this to title scree or to a checkpoint
-	get_tree().change_scene("res://src/Levels/Level.tscn")
+	if PlayerData.currentScene == null:
+		get_tree().change_scene("res://src/Levels/Level.tscn")
+	else:
+		get_tree().change_scene_to(PlayerData.currentScene)
 
 #func hitPointCheking(omni: int)-> void :
 #	var player_v = get_node("/root/Player")

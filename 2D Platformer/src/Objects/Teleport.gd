@@ -16,6 +16,7 @@ func Teleport() -> void:
 	animationPlayer.play("Fade_In")
 	yield(animationPlayer, "animation_finished")
 	#change to next scene
+	PlayerData.currentScene = nextScene
 	get_tree().change_scene_to(nextScene)
 
 
