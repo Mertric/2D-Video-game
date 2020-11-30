@@ -169,7 +169,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=32]
-extents = Vector2( 9, 4 )
+extents = Vector2( 9, 3 )
 
 [sub_resource type="RectangleShape2D" id=33]
 extents = Vector2( 8, 4 )
@@ -185,7 +185,7 @@ speed = Vector2( 100, 100 )
 position = Vector2( 0, -17 )
 frames = SubResource( 31 )
 animation = "Idle"
-frame = 6
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -200,11 +200,11 @@ physics_process_parent = true
 
 [node name="JumpDetector" type="Area2D" parent="."]
 modulate = Color( 0.0313726, 0, 1, 1 )
-position = Vector2( 0, -11 )
+position = Vector2( 0, -8 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JumpDetector"]
-position = Vector2( 0, -2 )
+position = Vector2( 0, -5 )
 shape = SubResource( 33 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
