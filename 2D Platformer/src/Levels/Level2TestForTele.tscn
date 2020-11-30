@@ -7,7 +7,7 @@
 [ext_resource path="res://src/Objects/Objective.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI_Stuff/ParallaxBackground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/Teleport.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Screen/MainScreen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Screen/EndScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Objects/FallCollision.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -128,5 +128,3 @@ position = Vector2( 4296, 960 )
 scale = Vector2( 300, 5 )
 
 [editable path="Objective"]
-
-[editable path="ParallaxBackground"]
