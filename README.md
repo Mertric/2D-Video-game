@@ -79,12 +79,12 @@ Platforms in the Level are created by using environment tile assets to make plat
 
 ## Testing 
 
-Testing Scenarios and Screenshots:
-Test 1: player is unable to walk through certain walls/platforms. Some platforms the player can pass through
-Test 2: player jumps on enemies head to kill enemy
-Test 3: enemy kills player when they run into the player
-Test 4: when player falls off the main platform, they respawn at the beginning of the level
-Test 5: when player has all coins and makes it to the portal they respawn in the next level
+Testing Scenarios and Screenshots: </br>
+Test 1: player is unable to walk through certain walls/platforms. Some platforms the player can pass through </br>
+Test 2: player jumps on enemies head to kill enemy </br>
+Test 3: enemy kills player when they run into the player </br>
+Test 4: when player falls off the main platform, they respawn at the beginning of the level  </br>
+Test 5: when player has all coins and makes it to the portal they respawn in the next level </br>
 
 ## How to Access the Game
 Put instructions here. 
@@ -98,19 +98,19 @@ Put instructions here.
 ## Credits
 Here are the credits to the artist's assets that were used in the game:
 
-Player’s character:
-Artist: Craftpix.net
-https://free-game-assets.itch.io/free-tiny-hero-sprites-pixel-art
+Player’s character: </br>
+Artist: Craftpix.net </br>
+https://free-game-assets.itch.io/free-tiny-hero-sprites-pixel-art </br>
 
-Enemy characters:
-Artist: cactusturtle
-https://cactusturtle.itch.io/
+Enemy characters: </br>
+Artist: cactusturtle </br>
+https://cactusturtle.itch.io/ </br>
 
-Tileset for Platforms, Background images, and coins
-Artist: MamaNeZakon
-https://mamanezakon.itch.io/forest-tileset 
+Tileset for Platforms, Background images, and coins </br>
+Artist: MamaNeZakon </br>
+https://mamanezakon.itch.io/forest-tileset  </br>
 
-Menu screen boxes
-Artist: Kenny
-https://opengameart.org/content/ui-pack
+Menu screen boxes </br>
+Artist: Kenny </br>
+https://opengameart.org/content/ui-pack </br>
 
