@@ -34,10 +34,6 @@ func _physics_process(delta: float) -> void:
 		velocity = move_and_slide(velocity, FLOOR_NORMAL)
 		
 
-	
-	
-	
-
 #This function will get the direction of the player when key is pressed for either A=Left, D=Right, or SpaceBar=Jump
 #Jumping will only occur if the play is on the floor.
 func GetDirection() -> Vector2:

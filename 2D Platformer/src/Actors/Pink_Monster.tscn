@@ -159,8 +159,7 @@ speed = Vector2( 250, 800 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -16 )
 frames = SubResource( 24 )
-animation = "Death"
-frame = 2
+animation = "Idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
