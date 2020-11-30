@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/Actors/Monster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Pink_Monster.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://src/Levels/SolidTiles.tres" type="TileSet" id=4]
 [ext_resource path="res://src/Objects/Objective.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI_Stuff/ParallaxBackground.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Objects/Teleport.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Screen/MainScreen.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 8 )
@@ -115,6 +117,10 @@ position = Vector2( 152, 848 )
 position = Vector2( 936, 744 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+
+[node name="Area2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 552, 896 )
+nextScene = ExtResource( 8 )
 
 [editable path="Objective"]
 
