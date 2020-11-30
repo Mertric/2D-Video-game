@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI_Stuff/ChangeSceneButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI_Stuff/Restart.tscn" type="PackedScene" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://UI_Stuff/Quit.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI_Stuff/UI_Theme.tres" type="Theme" id=5]
 [ext_resource path="res://UI_Stuff/UserInterface.gd" type="Script" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.392157 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="UserInterface" type="Control"]
 pause_mode = 2
@@ -17,13 +24,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Panel" type="Panel" parent="."]
+margin_left = 1640.0
+margin_top = 16.0
+margin_right = 1904.0
+margin_bottom = 104.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -225.419
-margin_top = 35.834
-margin_right = -36.4194
-margin_bottom = 90.834
+margin_left = -256.0
+margin_top = 32.0
+margin_right = -67.0
+margin_bottom = 87.0
 text = "Score: %s"
 align = 2
 
