@@ -8,10 +8,10 @@
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
 [node name="Blue Sky" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2( 1040, 0 )
+motion_mirroring = Vector2( 1040, 400 )
 
 [node name="Sprite" type="Sprite" parent="Blue Sky"]
-position = Vector2( 0, 8 )
+position = Vector2( 0, -80 )
 scale = Vector2( 13, 5 )
 texture = ExtResource( 4 )
 centered = false
@@ -21,6 +21,7 @@ motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite" type="Sprite" parent="Clouds"]
+position = Vector2( 0, -16 )
 scale = Vector2( 12, 5 )
 texture = ExtResource( 1 )
 centered = false
@@ -30,7 +31,7 @@ motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 960, 0 )
 
 [node name="Sprite" type="Sprite" parent="Hills"]
-position = Vector2( 0, 56 )
+position = Vector2( 0, 32 )
 scale = Vector2( 12, 5 )
 texture = ExtResource( 2 )
 centered = false
