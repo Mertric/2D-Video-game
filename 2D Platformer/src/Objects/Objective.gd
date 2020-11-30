@@ -9,4 +9,5 @@ func _on_Objective_body_entered(body: PhysicsBody2D) -> void:
 	
 func picked() -> void:
 	PlayerData.score += score
+	$coinSound.play()
 	animationPlayer.play("Fade_Out")

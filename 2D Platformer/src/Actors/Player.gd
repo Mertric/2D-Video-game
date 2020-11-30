@@ -125,6 +125,7 @@ func dead() -> void:
 	PlayerData.deaths += 1
 	velocity = Vector2(0,0)
 	$AnimatedSprite.play("Death")
+	$DeathSound.play()
 	$CollisionShape2D.call_deferred("set_disabled", true)
 
 	$Timer.start()
