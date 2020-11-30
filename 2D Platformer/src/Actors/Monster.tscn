@@ -1,8 +1,9 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://src/Actors/Monster.gd" type="Script" id=1]
 [ext_resource path="res://Assets/EnemySprite/Green idle.png" type="Texture" id=2]
 [ext_resource path="res://Assets/EnemySprite/Green bounce.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sounds/pepSound4.ogg" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -184,6 +185,7 @@ speed = Vector2( 100, 100 )
 position = Vector2( 0, -17 )
 frames = SubResource( 31 )
 animation = "Idle"
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -211,4 +213,9 @@ position = Vector2( 0, -9 )
 enabled = true
 cast_to = Vector2( 0, 9 )
 collision_mask = 8
+
+[node name="SlimeDieSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 2.751
+pitch_scale = 1.59
 [connection signal="body_entered" from="JumpDetector" to="." method="_on_JumpDetector_body_entered"]

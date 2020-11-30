@@ -2,6 +2,7 @@ extends Area2D
 
 
 func _on_FallCollision_body_entered(body):
+	$DeathSound.play()
 	dead()
 	
 #add like a scene to either a checkpoint or to the starting menu
