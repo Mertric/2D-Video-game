@@ -79,17 +79,17 @@ nextScenePath = "res://src/Levels/Level.tscn"
 margin_top = 65.0
 margin_bottom = 126.0
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 88.0
+[node name="Controls" type="Panel" parent="."]
+margin_left = 84.6365
 margin_top = 272.0
-margin_right = 520.0
+margin_right = 516.636
 margin_bottom = 696.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="A Key" type="TextureRect" parent="Panel"]
+[node name="A Key" type="TextureRect" parent="Controls"]
 margin_left = 48.0
 margin_top = 104.0
 margin_right = 147.0
@@ -97,7 +97,7 @@ margin_bottom = 200.0
 texture = ExtResource( 6 )
 expand = true
 
-[node name="Space Button" type="TextureRect" parent="Panel"]
+[node name="Space Button" type="TextureRect" parent="Controls"]
 margin_left = 64.0
 margin_top = 272.0
 margin_right = 376.0
@@ -105,7 +105,7 @@ margin_bottom = 368.0
 texture = ExtResource( 6 )
 expand = true
 
-[node name="D Key" type="TextureRect" parent="Panel"]
+[node name="D Key" type="TextureRect" parent="Controls"]
 margin_left = 288.0
 margin_top = 104.0
 margin_right = 387.0
@@ -113,7 +113,7 @@ margin_bottom = 200.0
 texture = ExtResource( 6 )
 expand = true
 
-[node name="Control Label" type="Label" parent="Panel"]
+[node name="Control Label" type="Label" parent="Controls"]
 anchor_left = 0.298
 anchor_top = 0.061
 anchor_right = 0.298
@@ -126,7 +126,7 @@ custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "CONTROLS"
 
-[node name="A Label" type="Label" parent="Panel"]
+[node name="A Label" type="Label" parent="Controls"]
 margin_left = 80.0
 margin_top = 120.0
 margin_right = 130.0
@@ -137,7 +137,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Space Label" type="Label" parent="Panel"]
+[node name="Space Label" type="Label" parent="Controls"]
 margin_left = 152.0
 margin_top = 288.0
 margin_right = 288.0
@@ -148,7 +148,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="D Label" type="Label" parent="Panel"]
+[node name="D Label" type="Label" parent="Controls"]
 margin_left = 320.0
 margin_top = 120.0
 margin_right = 370.0
@@ -156,7 +156,7 @@ margin_bottom = 188.0
 custom_fonts/font = SubResource( 3 )
 text = "D"
 
-[node name="Left Label" type="Label" parent="Panel"]
+[node name="Left Label" type="Label" parent="Controls"]
 margin_left = 56.0
 margin_top = 200.0
 margin_right = 223.0
@@ -168,7 +168,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Right Label" type="Label" parent="Panel"]
+[node name="Right Label" type="Label" parent="Controls"]
 margin_left = 280.0
 margin_top = 192.0
 margin_right = 464.0
@@ -180,7 +180,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Jump Label" type="Label" parent="Panel"]
+[node name="Jump Label" type="Label" parent="Controls"]
 margin_left = 160.0
 margin_top = 360.0
 margin_right = 370.0
@@ -192,7 +192,51 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="pause" type="Panel" parent="."]
+margin_left = 90.0
+margin_top = 715.0
+margin_right = 524.0
+margin_bottom = 889.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P Key" type="TextureRect" parent="pause"]
+margin_left = 28.6725
+margin_top = 40.9432
+margin_right = 127.673
+margin_bottom = 136.943
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P Label" type="Label" parent="pause"]
+margin_left = 57.0553
+margin_top = 54.2037
+margin_right = 107.055
+margin_bottom = 122.204
+custom_fonts/font = SubResource( 3 )
+text = "P"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseText" type="Label" parent="pause"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 160.883
+margin_top = 56.3227
+margin_right = 279.883
+margin_bottom = 124.323
+custom_fonts/font = SubResource( 3 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rules" type="Panel" parent="."]
 margin_left = 1376.0
 margin_top = 272.0
 margin_right = 1816.0
@@ -202,7 +246,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Rules Label" type="Label" parent="Panel2"]
+[node name="Rules Label" type="Label" parent="Rules"]
 margin_left = 152.0
 margin_top = 16.0
 margin_right = 296.0
@@ -214,7 +258,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Rules Description" type="Label" parent="Panel2"]
+[node name="Rules Description" type="Label" parent="Rules"]
 margin_left = 16.0
 margin_top = 88.0
 margin_right = 440.0

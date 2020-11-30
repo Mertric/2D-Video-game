@@ -6,7 +6,7 @@ func _on_FallCollision_body_entered(body):
 	
 #add like a scene to either a checkpoint or to the starting menu
 func dead() -> void:
-	
+	PlayerData.score = 0
 	$Timer.start()
 	
 func _on_Timer_timeout():

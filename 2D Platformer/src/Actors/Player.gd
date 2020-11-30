@@ -117,6 +117,7 @@ func AnimSprite() -> void:
 
 func dead() -> void:
 	isDead = true
+	PlayerData.score = 0
 	PlayerData.deaths += 1
 	velocity = Vector2(0,0)
 	$AnimatedSprite.play("Death")
