@@ -1,4 +1,4 @@
-# CoOl JuMpInG GaMe
+# CoOl JuMpInG GaMe (2D Video Game)
 
 ## How to View Files
 Note: This will only view the program file (GDScript) contents and not be able to run the actual game or show the animations for objects. The actual gameplay will be shown during the project demonstration.
