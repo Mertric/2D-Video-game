@@ -103,29 +103,29 @@ Platforms in the Level are created by using environment tile assets to make plat
 
 ## Screenshots of the Game
 
-Player's Scene in Godot Workspace </br>
-![player_scene](/Game Screenshots/PlayerScene.jpg)
+#### Player's Scene in Godot Workspace </br>
+![player_scene](GameScreenshots/PlayerScene.JPG)
 
-Enemy Scene in Godot Workspace  </br>
-![enemy_scene](/Game Screenshots/MonsterScene.jpg)
+#### Enemy Scene in Godot Workspace  </br>
+![enemy_scene](GameScreenshots/MonsterScene.JPG)
 
-Coin Objective Scene in Godot Workspace: </br>
-![coin_scene](/Game Screenshots/CoinScene.jpg)
+#### Coin Objective Scene in Godot Workspace: </br>
+![coin_scene](GameScreenshots/CoinScene.JPG)
 
-Level Being Run: </br>
-![LevelGameRun](/Game Screenshots/LevelGamePlay.jpg)
+#### Level Being Run: </br>
+![LevelGameRun](GameScreenshots/LevelGamePlay.JPG)
 
-Death Screen (when player dies): </br>
-![DeathScreen](/Game Screenshots/DeathScene.jpg)
+#### Death Screen (when player dies): </br>
+![DeathScreen](GameScreenshots/DeathScene.JPG)
 
-Main Menu (First Screen loaded when running game): </br>
-![MainMenu](/Game Screenshots/MainMenuGamePlay.jpg)
+#### Main Menu (First Screen loaded when running game): </br>
+![MainMenu](GameScreenshots/MainMenuGamePlay.JPG)
 
-Pause Screen (player presses 'P'): </br>
-![PauseScreen](/Game Screenshots/PauseScreen.jpg)
+#### Pause Screen (player presses 'P'): </br>
+![PauseScreen](GameScreenshots/PauseScreen.JPG)
 
-End Screen (player reaches the end of the game): </br>
-![EndScreen](/Game Screenshots/EndScreen.jpg)
+#### End Screen (player reaches the end of the game): </br>
+![EndScreen](GameScreenshots/EndScreen.JPG)
 
 
 ## Team Members 
