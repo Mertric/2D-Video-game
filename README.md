@@ -101,17 +101,32 @@ To make the player, enemies, coins, and portal we create them in separate scenes
 Platforms in the Level are created by using environment tile assets to make platforms that the player can control their character on. Some tiles have collisions (solid tiles that players cannot pass through), and some tiles have no collisions (tiles that the player is able to pass through). Platforms are made by putting together these tiles. There are also special types of platforms that the player can jump through and they can actually land on top of that platform. These are called one-way platforms. For example, if there is a floating platform the player can try jumping through the platform from bottom-up, and when they pass through the platform they land on top of the platform.
 
 
-## Testing 
+## Screenshots of the Game
 
-Testing Scenarios and Screenshots: </br>
-Test 1: player is unable to walk through certain walls/platforms. Some platforms the player can pass through </br>
-Test 2: player jumps on enemies head to kill enemy </br>
-Test 3: enemy kills player when they run into the player </br>
-Test 4: when player falls off the main platform, they respawn at the beginning of the level  </br>
-Test 5: when player makes it to the portal they respawn in the next level </br>
+Player's Scene in Godot Workspace </br>
+![player_scene](/Game Screenshots/PlayerScene.jpg)
 
-## How to Access the Game
-Put instructions here. 
+Enemy Scene in Godot Workspace  </br>
+![enemy_scene](/Game Screenshots/MonsterScene.jpg)
+
+Coin Objective Scene in Godot Workspace: </br>
+![coin_scene](/Game Screenshots/CoinScene.jpg)
+
+Level Being Run: </br>
+![LevelGameRun](/Game Screenshots/LevelGamePlay.jpg)
+
+Death Screen (when player dies): </br>
+![DeathScreen](/Game Screenshots/DeathScene.jpg)
+
+Main Menu (First Screen loaded when running game): </br>
+![MainMenu](/Game Screenshots/MainMenuGamePlay.jpg)
+
+Pause Screen (player presses 'P'): </br>
+![PauseScreen](/Game Screenshots/PauseScreen.jpg)
+
+End Screen (player reaches the end of the game): </br>
+![EndScreen](/Game Screenshots/EndScreen.jpg)
+
 
 ## Team Members 
 * Minna Roberto 
