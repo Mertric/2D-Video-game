@@ -1,5 +1,56 @@
 # CoOl JuMpInG GaMe
 
+## How to View Files
+Note: This will only view the program file (GDScript) contents and not be able to run the actual game or show the animations for objects. The actual gameplay will be shown during the project demonstration.
+
+1. Download the Godot Game Engine in the link provided (standard version recommended): https://godotengine.org/download/windows 
+
+2. Download the folder with Godot files to your computer (folder that was handed into URCourses)
+
+3. When Godot is done downloading you can open it up
+
+4. On the right hand side click “Import”
+![projectImport1](GameScreenshots/projectImport.JPG)
+
+5. Browse for where you saved the Godot files
+![projectImport2](GameScreenshots/projectImport2.JPG)
+
+6. Choose the “project.godot” file and click “Import and Edit”. This is the file that will open up the Godot workspace:
+![projectImport3](GameScreenshots/projectImport3.JPG)
+
+7. The workspace should open up. If you get an “Alert” message, click “OK”. That is just a scene (.tscn) with png assets that do not contain code so they will not be included in the program files.
+![projectImport4](GameScreenshots/projectImport4.JPG)
+
+8. The GD files will be on the left hand side of the workspace
+
+    ![projectImport5](GameScreenshots/projectImport5.JPG)
+
+9. Right click on a .gd file and click “Open”. For example, right click on Player.gd and click "Open"
+![projectImport6](GameScreenshots/projectImport6.JPG)
+
+10. This should show the GDScript program contents. 
+![projectImport7](GameScreenshots/projectImport7.JPG)
+
+
+## List of GDScript (program) files
+Screens/Menus:
+- Play.gd 
+- Quit.gd
+- Restart.gd
+- EndScreen.gd
+
+Levels:
+- Monster.gd
+- Player.gd
+- PlayerData.gd
+- Teleport.gd
+- Objective.gd
+- FallCollision.gd
+- UserInterface.gd 
+
+Godot project:
+- project.godot
+
 ## Purpose of the Project
 Our 2D platform video game project was created in order to showcase the functional and quality requirements that are shown in a software engineering methodology
 
@@ -53,22 +104,6 @@ The player’s objective is to collect coins in the level and reach the teleport
 * The player can pass through some walls and jump through some platforms. For some walls/platforms they cannot do this.
 * If the player falls off the edge of a mainland platform, they will respawn at the beginning of a level 
 
-## List of GDScript (program) files
-Screens/Menus:
-- Play.gd 
-- Quit.gd
-- Restart.gd
-- EndScreen.gd
-
-Levels:
-- Monster.gd
-- Player.gd
-- PlayerData.gd
-- Teleport.gd
-- Objective.gd
-- FallCollision.gd
-- UserInterface.gd 
-
 
 ## Process of Creating the Game
 
@@ -99,6 +134,8 @@ Separate scenes group together nodes in order to make:
 To make the player, enemies, coins, and portal we create them in separate scenes. The scene can consist of nodes and GDScripts with those nodes. Certain nodes can be added to the scene depending on what functionality we wanted those objects to have. They all have separate .gd files to implement their functions with code. The scene can get saved as a .tscn to be brought into the main Level scene as a node itself. For the enemies and coins, we duplicated their nodes throughout the Level scene. If we were to make changes to the original enemy or coin scene, then those changes would be implemented throughout all of the duplicated nodes in the main Level. 
 
 Platforms in the Level are created by using environment tile assets to make platforms that the player can control their character on. Some tiles have collisions (solid tiles that players cannot pass through), and some tiles have no collisions (tiles that the player is able to pass through). Platforms are made by putting together these tiles. There are also special types of platforms that the player can jump through and they can actually land on top of that platform. These are called one-way platforms. For example, if there is a floating platform the player can try jumping through the platform from bottom-up, and when they pass through the platform they land on top of the platform.
+
+To make the main menu screen and end screen, buttons were added to the scene as nodes. Buttons can have a “next scene” added to their function in order to transition to that next scene. For example, when a player clicks on “Play” then that will load the player into the beginning level of the game. Other buttons like restart, main menu, or quit will either restart the player back to the beginning of the level, back to the main menu, or exit the game respectively. Those actions are used with code to transition the player to the button’s respective output.
 
 
 ## Screenshots of the Game
