@@ -14,6 +14,7 @@ func _ready():
 #signals for call back to check when the player enters the 2d area the monster will die
 func _on_JumpDetector_body_entered(body: PhysicsBody2D) -> void:
 	if body.global_position.y >= get_node("JumpDetector").global_position.y:
+		#emit_signal("enemyDied")
 		return
 	$CollisionShape2D.set_deferred("disabled", true) 
 	die()
