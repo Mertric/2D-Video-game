@@ -1,27 +1,35 @@
-# 2D-Video-game (Put actual game title here)
+# CoOl JuMpInG GaMe
 
 ## Purpose of the Project
-Our 2D video game project was created in order to showcase the functional and quality requirements that are shown in a software engineering methodology
+Our 2D platform video game project was created in order to showcase the functional and quality requirements that are shown in a software engineering methodology
 
-## Contents
+## Contents of Github Repo
 
 * /2D Platformer
-     * /.import
+     * /.import - imported assets
      * /.mono
      * /.Assets
-          * /EnemySprite
-          * /LevelAssets
-          * /Sprites
+          * /Buttons - png images for buttons 
+          * /EnemySprite - .png assets for the enemies
+          * /Fonts - fonts used for texts
+          * /LevelAssets - png assets for the level’s environment
+          * /Sounds - .ogg files for sounds used 
+          * /Sprites - .png assets for the player’s character
+     * /Screen - .tscn for screens
      * /src
-          * /Actors
-          * /Levels
-          * /Objects
+          * /Actors - the .tscn and .gd files for player and enemies
+          * /Autoload - .gd and .tscn files for player’s data
+          * /Levels - the .tscn and .tres files for the Levels
+          * /Objects - .gd and .tscn files of objects in game
+     * /UI_Stuff - .gd and .tscn files of user interface objects
+          
 * /README.md
 
+(Types of files: GDScript files in .gd format, and scene files in .tscn format, tilesets in .tres format, sound files in .ogg format)
 
 ## Game Objective 
 
-The player’s objective is to collect all of the coins in the level in order to move on to the next level. Although, the player will have the added challenge to avoid/defeat enemies along their journey to collect the coins. User’s can defeat enemies by jumping on the enemies heads
+The player’s objective is to collect coins in the level and reach the teleport and the end in order to move on to the next level. Although, the player will have the added challenge to avoid/defeat enemies along their journey to collect the coins. User’s can defeat enemies by jumping on the enemies heads
 
 
 ## Characters
@@ -45,6 +53,22 @@ The player’s objective is to collect all of the coins in the level in order to
 * The player can pass through some walls and jump through some platforms. For some walls/platforms they cannot do this.
 * If the player falls off the edge of a mainland platform, they will respawn at the beginning of a level 
 
+## List of GDScript (program) files
+Screens/Menus:
+- Play.gd 
+- Quit.gd
+- Restart.gd
+- EndScreen.gd
+
+Levels:
+- Monster.gd
+- Player.gd
+- PlayerData.gd
+- Teleport.gd
+- Objective.gd
+- FallCollision.gd
+- UserInterface.gd 
+
 
 ## Process of Creating the Game
 
@@ -54,7 +78,7 @@ Our team members had to learn how GDScript worked and how to also use it with th
 
 Assets were needed  for the nodes (objects) of the game  to make visual animations for those nodes. The assets were saved as png files and imported into Godot in order to be used. 
 
-Types of nodes with assets used (Credits to artists at the end of README.md):
+Types of nodes with assets used (Credits to artists at the end of README):
 * User's character
 * Enemy characters
 * Environment tiles for the platforms and background
