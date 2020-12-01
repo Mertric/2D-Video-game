@@ -138,7 +138,7 @@ Platforms in the Level are created by using environment tile assets to make plat
 To make the main menu screen and end screen, buttons were added to the scene as nodes. Buttons can have a “next scene” added to their function in order to transition to that next scene. For example, when a player clicks on “Play” then that will load the player into the beginning level of the game. Other buttons like restart, main menu, or quit will either restart the player back to the beginning of the level, back to the main menu, or exit the game respectively. Those actions are used with code to transition the player to the button’s respective output.
 
 
-## Screenshots of the Game
+## Screenshots of the Object Scenes and Gameplay
 
 #### Player's Scene in Godot Workspace </br>
 ![player_scene](GameScreenshots/PlayerScene.JPG)
@@ -149,17 +149,32 @@ To make the main menu screen and end screen, buttons were added to the scene as 
 #### Coin Objective Scene in Godot Workspace: </br>
 ![coin_scene](GameScreenshots/CoinScene.JPG)
 
-#### Level Being Run: </br>
+### Teleport Scene in Godot Workspace:
+![Teleport](GameScreenshots/TeleportScene.JPG)
+
+### Level 1 in Godot Workspace:
+![Level1](GameScreenshots/Level1Scene.JPG)
+
+### Level 2 in Godot Workspace:
+![Level2](GameScreenshots/Level2Scene.JPG)
+
+#### Level1 Being Run Example: </br>
 ![LevelGameRun](GameScreenshots/LevelGamePlay.JPG)
 
 #### Death Screen (when player dies): </br>
 ![DeathScreen](GameScreenshots/DeathScene.JPG)
+
+### Main Menu Scene in Godot Workspace:
+![MainMenu](GameScreenshots/MainMenuScene.JPG)
 
 #### Main Menu (First Screen loaded when running game): </br>
 ![MainMenu](GameScreenshots/MainMenuGamePlay.JPG)
 
 #### Pause Screen (player presses 'P'): </br>
 ![PauseScreen](GameScreenshots/PauseScreen.JPG)
+
+### End Screen Scene in Godot Workspace:
+![EndScreen](GameScreenshots/EndScreenScene.JPG)
 
 #### End Screen (player reaches the end of the game): </br>
 ![EndScreen](GameScreenshots/EndScreen.JPG)
