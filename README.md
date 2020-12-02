@@ -184,7 +184,7 @@ To make the main menu screen and end screen, buttons were added to the scene as 
 * Minna Roberto 
 * Timothy Pasion
 * Ziyan Zhang
-* Precious Wagwe
+* Precious Wangwe
 
 ## Credits
 Here are the credits to the artist's assets that were used in the game:
